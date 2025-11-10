@@ -34,19 +34,19 @@ export default function HoverInfoCard({
         alt=""
         fill
         priority
-        sizes="(max-width: 768px) 100vw, 320px"
+        sizes=" 300px"
         className="pointer-events-none select-none object-cover opacity-100 transition-opacity duration-300 ease-out group-hover:opacity-0"
       />
       <Image
         src="/hoverTrue.svg"
         alt=""
         fill
-        sizes="(max-width: 768px) 100vw, 320px"
+        sizes=" 300px"
         className="pointer-events-none select-none object-cover opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
       />
 
       {/* Content */}
-      <div className="relative z-10 h-full w-full flex flex-col items-start justify-start text-start px-20 py-10">
+      <div className="relative z-10 h-full w-full flex flex-col items-start text-start justify-center px-20 py-10">
         <h3
           className={[
             "text-xs sm:text-sm md:text-base font-bold tracking-tight wrap-break-word ",
