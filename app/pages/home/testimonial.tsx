@@ -11,7 +11,7 @@ export default function Testimonial() {
             {/* Frame aligned with other sections */}
             <div className="relative w-[1440px] 2xl:w-[1920px] max-w-full">
                 <Image
-                    src="/chooseusSection.svg"
+                    src="/chooseusSection.png"
                     alt="Background"
                     fill
                     priority
