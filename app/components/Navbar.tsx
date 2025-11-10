@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GetQuoteButton from "./GetQuoteButton";
 import Image from "next/image";
 
@@ -18,16 +18,39 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname() || "/";
+  const [visible, setVisible] = useState(true);
+  const [lastY, setLastY] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY || 0;
+      if (open) {
+        setVisible(true);
+        setLastY(y);
+        return;
+      }
+      if (y < 10) {
+        setVisible(true);
+      } else if (y > lastY + 5) {
+        setVisible(false);
+      } else if (y < lastY - 5) {
+        setVisible(true);
+      }
+      setLastY(y);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [lastY, open]);
 
   return (
-    <header className="absolute inset-x-0 top-5 z-50 w-full">
+    <header className={["fixed inset-x-0 top-0 z-50 w-full transition-transform duration-300", visible ? "translate-y-0" : "-translate-y-full"].join(" ") }>
       <div className="mx-auto w-[1350px] max-w-[calc(100%-30px)] max-w-full px-6 sm:px-8">
-        <nav className="flex items-center justify-between gap-3 sm:gap-4 rounded-full border border-white/30 bg-black/5 backdrop-blur-xs px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-3 lg:py-4">
+        <nav className="flex items-center justify-between gap-3 sm:gap-4 rounded-full border border-white/30 bg-black/30 backdrop-blur-xs px-3 py-1 sm:px-4 sm:py-1.5 md:px-6 md:py-2.5 lg:py-3 mt-4">
           <div className="flex items-center gap-2">
             {/* Logo image placed in /public/logo.png */}
             <Link href="/" className="inline-flex items-center" aria-label="Home">
               <Image
-                src="/logo.png"
+                src="/logo.svg"
                 alt="Logo"
                 width={600}
                 height={600}

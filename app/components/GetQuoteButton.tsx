@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 type Size = "sm" | "md" | "lg";
-type Variant = "solid" | "outline";
+type Variant = "solid" | "outline" | "outline-primary";
 
 export type GetQuoteButtonProps = {
   label?: string;
@@ -30,17 +30,26 @@ function sizeClasses(size: Size) {
 }
 
 function variantClasses(variant: Variant): string {
-  if (variant === "outline") {
-    return [
-      "border border-white/80 text-white bg-transparent",
-      "hover:bg-secondary hover:border-secondary",
-    ].join(" ");
+  switch (variant) {
+    case "outline":
+      return [
+        "border border-white/80 text-white bg-transparent",
+        "hover:bg-secondary hover:border-secondary",
+      ].join(" ");
+    case "outline-primary":
+      return [
+        "border border-primary text-primary bg-transparent",
+        
+      ].join(" ");
+    case "solid":
+    default:
+      return [
+        "bg-primary text-white",
+        "hover:bg-primary/90",
+      ].join(" ");
   }
-  return [
-    "bg-primary text-white",
-    "hover:bg-primary/90",
-  ].join(" ");
 }
+
 
 const baseClasses = [
   "inline-flex items-center justify-center rounded-full",
