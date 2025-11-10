@@ -11,7 +11,7 @@ export default function ChooseUs() {
     return (
         <main className="min-h-screen w-full flex items-start justify-center px-4">
             {/* Fixed-size hero frame */}
-            <div className="relative w-[1440px] 2xl:w-[1920px] max-w-full min-h-[900px] overflow-visible ">
+            <div className="relative w-full  min-h-[900px] overflow-visible ">
                 {/* Background image fills the frame */}
                 <Image
                     src="/chooseusSection.svg"
