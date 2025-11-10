@@ -7,9 +7,9 @@ import Temoin from "@/app/components/Temoin";
 
 export default function Testimonial() {
     return (
-        <main className="min-h-screen w-full flex items-start justify-center ">
+        <main className=" w-full flex items-start justify-center ">
             {/* Frame aligned with other sections */}
-            <div className="relative w-[1440px] 2xl:w-[1920px] max-w-full">
+            <div className="relative w-full">
                 <Image
                     src="/chooseusSection.png"
                     alt="Background"
@@ -20,7 +20,7 @@ export default function Testimonial() {
                     className="select-none object-cover"
                 />
                 {/* Content constrained to Navbar width */}
-                <div className="relative z-10 mx-auto w-full max-w-7xl text-secondary">
+                <div className="relative z-10 mx-auto w-full  text-secondary">
 
                     <div className="flex flex-col items-center text-center">
                         <motion.p

@@ -9,16 +9,15 @@ import { motion } from "framer-motion";
 
 export default function ChooseUs() {
     return (
-        <main className="min-h-screen w-full flex items-start justify-center px-4">
+        <main className=" w-full  flex items-start justify-center">
             {/* Fixed-size hero frame */}
             <div className="relative w-full g min-h-[900px] overflow-visible ">
                 <Image
-                    src="/chooseusSection.svg"
+                    src="/chooseusSection.png"
                     alt="Background"
                     fill
                     priority
                     quality={100}
-                    sizes="(max-width: 1920px) 100vw, 1920px"
                     className="select-none object-cover"
                 />
 

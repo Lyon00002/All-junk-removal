@@ -21,9 +21,9 @@ export default function Hero() {
     return () => clearInterval(id);
   }, [slides.length]);
   return (
-    <main className="min-h-screen w-full flex items-start justify-center pb-0 ">
+    <main className="h-[500px] sm:h-[900px] md:h-[950px] lg:h-[1000px] w-full flex items-start justify-center pb-0 ">
       {/* Fixed-size hero frame */}
-      <div className="relative w-full max-w-full h-[900px] overflow-hidden ">
+      <div className="relative w-full max-w-full h-full overflow-hidden">
         {/* Background image fills the frame */}
         <div className="absolute inset-0">
           {slides.map((s, i) => (

@@ -7,16 +7,15 @@ import BookEstimateButton from "@/app/components/BookEstimateButton";
 
 export default function WhoAreYou() {
   return (
-    <main className="min-h-screen w-full flex items-start justify-center px-4">
+    <main className=" w-full flex items-start justify-center">
       {/* Frame aligned with other sections */}
-      <div className="relative w-[1440px] 2xl:w-[1920px] max-w-full">
+      <div className="relative w-full">
         <Image
           src="/chooseusSection.png"
           alt="Background"
           fill
           priority
           quality={100}
-          sizes="(max-width: 1920px) 100vw, 1920px"
           className="select-none object-cover"
         />
         {/* Content constrained to Navbar width */}
