@@ -30,7 +30,7 @@ export default function HoverInfoCard({
     >
       {/* Backgrounds */}
       <Image
-        src="/hoverfalse.svg"
+        src="/hoverFalse.svg"
         alt=""
         fill
         priority
