@@ -40,7 +40,7 @@ export default function Hero() {
                 fill
                 priority={i === index}
                 quality={100}
-                sizes="(max-width: 1920px) 100vw, 1920px"
+                //sizes="(max-width: 1920px) 100vw, 1920px"
                 className="select-none object-cover"
               />
             </motion.div>

@@ -14,7 +14,7 @@ export default function ChooseUs() {
             <div className="relative w-[1440px] 2xl:w-[1920px] max-w-full min-h-[900px] overflow-visible ">
                 {/* Background image fills the frame */}
                 <Image
-                    src="/ChooseusSection.svg"
+                    src="/chooseusSection.svg"
                     alt="Background"
                     fill
                     priority
