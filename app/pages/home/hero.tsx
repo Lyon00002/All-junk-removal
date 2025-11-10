@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <main className="min-h-screen w-full flex items-start justify-center pb-0 ">
       {/* Fixed-size hero frame */}
-      <div className="relative w-[1440px] 2xl:w-[1920px] max-w-full h-[900px] overflow-hidden ">
+      <div className="relative w-full max-w-full h-[900px] overflow-hidden ">
         {/* Background image fills the frame */}
         <div className="absolute inset-0">
           {slides.map((s, i) => (
