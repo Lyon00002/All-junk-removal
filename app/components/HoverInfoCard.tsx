@@ -38,7 +38,7 @@ export default function HoverInfoCard({
         className="pointer-events-none select-none object-cover opacity-100 transition-opacity duration-300 ease-out group-hover:opacity-0"
       />
       <Image
-        src="/hovertrue.svg"
+        src="/hoverTrue.svg"
         alt=""
         fill
         sizes="(max-width: 768px) 100vw, 320px"
