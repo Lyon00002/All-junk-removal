@@ -9,9 +9,9 @@ import DotsIndicator from "../../components/DotsIndicator";
 
 export default function Hero() {
   const slides = [
-    { src: "/poubelles1.jpg", label: "poubelle 1" },
-    { src: "/poubelles2.jpg", label: "poubelle 2" },
-    { src: "/poubelles3.jpg", label: "poubelle 3" },
+    { src: "/img1.jpg", label: "poubelle 1" },
+    { src: "/img2.jpg", label: "poubelle 2" },
+    { src: "/img3.jpg", label: "poubelle 3" },
   ];
   const [index, setIndex] = useState(0);
   useEffect(() => {

@@ -44,7 +44,7 @@ export default function Navbar() {
 
   return (
     <header className={["fixed inset-x-0 top-0 z-50 w-full transition-transform duration-300", visible ? "translate-y-0" : "-translate-y-full"].join(" ") }>
-      <div className="mx-auto w-[1350px] max-w-[calc(100%-30px)] max-w-full px-6 sm:px-8">
+      <div className="mx-auto w-[1350px] max-w-[calc(100%-30px)] px-6 sm:px-8">
         <nav className="flex items-center justify-between gap-3 sm:gap-4 rounded-full border border-white/30 bg-black/30 backdrop-blur-xs px-3 py-1 sm:px-4 sm:py-1.5 md:px-6 md:py-2.5 lg:py-3 mt-4">
           <div className="flex items-center gap-2">
             {/* Logo image placed in /public/logo.png */}

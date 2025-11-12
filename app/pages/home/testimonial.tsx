@@ -52,18 +52,18 @@ export default function Testimonial() {
                                 <div className="flex gap-[30px] shrink-0">
                                     {[...Array(6)].map((_, i) => (
                                         <div key={`a-${i}`} className="shrink-0">
-                                            <Temoin className="w-[160px] sm:w-[240px] md:w-[420px] h-full overflow-visible" />
+                                            <Temoin className="w-[240px] sm:w-[280px] md:w-[420px] h-full overflow-hidden" />
                                         </div>
                                     ))}
                                 </div>
                                 {/* Row B (duplicate for seamless loop) */}
-                                {/* <div className="flex gap-[30px] shrink-0">
+                                <div className="flex gap-[30px] shrink-0">
                                     {[...Array(6)].map((_, i) => (
                                         <div key={`b-${i}`} className="shrink-0">
-                                            <Temoin className="w-[180px] sm:w-[240px] md:w-[420px] h-full overflow-hidden" />
+                                            <Temoin className="w-[240px] sm:w-[280px] md:w-[420px] h-full overflow-hidden" />
                                         </div>
                                     ))}
-                                </div> */}
+                                </div>
                             </motion.div>
                         </div>
                     </div>
