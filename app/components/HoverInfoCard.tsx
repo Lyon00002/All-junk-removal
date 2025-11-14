@@ -13,61 +13,43 @@ type HoverInfoCardProps = {
 export default function HoverInfoCard({
   title,
   description,
-  icon,
   className = "",
-  width = 300,
-  height = 300,
+  width = "100%",
+  height = "300px",
 }: HoverInfoCardProps) {
   return (
-    <div
-      className={[
-        "group relative overflow-hidden",
-        "transition-transform duration-300 ease-out hover:scale-[1.02]",
+    <div 
+      className={["group relative overflow-hidden bg-gray-100 rounded-lg",
         className,
       ].join(" ")}
-      style={{ width, height }}
+      
       aria-label={title}
+       style={{ width, height }}
     >
-      {/* Backgrounds */}
-      <Image
-        src="/hoverFalse.svg"
-        alt=""
-        fill
-        priority
-        sizes=" 300px"
-        className="pointer-events-none select-none object-cover opacity-100 transition-opacity duration-300 ease-out group-hover:opacity-0"
-      />
-      <Image
-        src="/hoverTrue.svg"
-        alt=""
-        fill
-        sizes=" 300px"
-        className="pointer-events-none select-none object-cover opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
-      />
-
-      {/* Content */}
-      <div className="relative z-10 h-full w-full flex flex-col items-start text-start justify-center px-20 py-10">
+      <div className="relative z-10 p-4 transition-opacity duration-300 ease-out group-hover:opacity-0">
         <h3
-          className={[
-            "text-xs sm:text-sm md:text-base font-bold tracking-tight wrap-break-word ",
-            "text-secondary transition-colors duration-300 ease-out",
-            "group-hover:text-white",
-          ].join(" ")}
-        >
-          {title}
-        </h3>
-        <p
-          className={[
-            "",
-            "mt-2 text-xs sm:text-sm md:text-base leading-relaxed wrap-break-word max-w-full",
-            "text-secondary/90 transition-colors duration-300 ease-out",
-            "group-hover:text-white/90",
-            "line-clamp-5", // ✅ coupe à 5 lignes avec ellipses
-          ].join(" ")}
-        >
-          {description}
-        </p>
+            className={[
+              "text-xs sm:text-sm md:text-base font-bold tracking-tight wrap-break-word ",
+              "text-secondary text-left transition-colors duration-300 ease-out",
+              "group-hover:text-white",
+            ].join(" ")}
+          >
+            {title}
+          </h3>
+          <p
+            className={[
+              "",
+              "text-8 sm:text-12 md:text-14 leading-relaxed wrap-break-word max-w-full",
+              "text-secondary/90 text-left transition-colors duration-300 ease-out",
+              "group-hover:text-white/90 mt-2",
+              "line-clamp-4", // ✅ coupe à 5 lignes avec ellipses
+            ].join(" ")}
+          >
+            {description}
+          </p>
       </div>
+      <div className="absolute inset-x-0 bottom-0 h-[45%] group-hover:h-full transition-all duration-300 ease-out bg-amber-400 rounded-lg" />
     </div>
+
   );
 }

@@ -19,7 +19,7 @@ export default function WhoAreYou() {
           className="select-none object-cover"
         />
         {/* Content constrained to Navbar width */}
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-16 sm:py-20 md:py-24 text-secondary">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-16 sm:py-20 md:py-24 text-secondary ">
           <div className="grid grid-cols-1 md:grid-cols-2 items-stretch gap-8 md:gap-10">
             {/* Left: Image */}
             <div className="relative w-full overflow-hidden rounded-lg h-[260px] sm:h-[320px] md:h-full md:min-h-[360px]">

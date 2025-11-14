@@ -69,7 +69,13 @@ export default function Hero() {
               className="text-white text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight tracking-tight"
               variants={{ hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0 } }}
             >
-              Fast, Affordable, and Reliable Junk Removal <span className="text-primary font-bold">We Haul It All!</span>
+              Fast, Affordable, and Reliable Junk Removal{" "}
+              <motion.span
+                className="text-primary font-bold inline-block"
+                variants={{ hidden: { opacity: 0, y: 6, scale: 0.98 }, show: { opacity: 1, y: 0, scale: 1 } }}
+              >
+                We Haul It All!
+              </motion.span>
             </motion.h1>
             <motion.p
               className="mt-4 text-white/90 text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto"

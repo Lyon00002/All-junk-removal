@@ -1,9 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import ArrowButton from "../../components/ArrowButton";
-import GetQuoteButton from "../../components/GetQuoteButton";
-import BookEstimateButton from "../../components/BookEstimateButton";
 import HoverInfoCard from "../../components/HoverInfoCard";
 import { motion } from "framer-motion";
 
@@ -11,7 +8,7 @@ export default function ChooseUs() {
     return (
         <main className=" w-full  flex items-start justify-center">
             {/* Fixed-size hero frame */}
-            <div className="relative w-full g min-h-[900px] overflow-visible ">
+            <div className="relative w-full overflow-visible ">
                 <Image
                     src="/chooseusSection.png"
                     alt="Background"
@@ -22,7 +19,7 @@ export default function ChooseUs() {
                 />
 
                 {/* Centered content constrained to Navbar width */}
-                <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-16 sm:py-20 md:py-24 flex flex-col items-center text-center text-secondary">
+                <div className="relative z-10 mx-auto w-full max-w-7xl  py-16 sm:py-8 md:py-12 flex flex-col items-center text-center text-secondary">
                     <motion.p       
                         className="font-semibold leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl"
                         variants={{ hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0 } }}
@@ -34,7 +31,7 @@ export default function ChooseUs() {
                     </motion.p>
 
                     <motion.p
-                        className="mt-4 sm:mt-5 md:mt-6 w-full text-base sm:text-lg md:text-xl"
+                        className="mt-4 sm:mt-5 md:mt-6 w-full text-base sm:text-lg md:text-xl px-6 sm:px-8 "
                         variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }}
                         initial="hidden"
                         whileInView="show"
@@ -45,7 +42,7 @@ export default function ChooseUs() {
 
                     {/* 3x2 responsive grid of hover cards */}
                     <motion.div
-                        className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 "
+                        className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  w-full  mt-10 gap-8"
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true, amount: 0.15 }}
@@ -67,9 +64,10 @@ export default function ChooseUs() {
                                 <HoverInfoCard
                                     title={`Quality Service ${i + 1}`}
                                     description="We will step in as soon as the work is completed to clean your business premises from top to bottom, so you can return to work in a clean and pleasant environment."
-                                    width="90%"
-                                    height={300}
+                                    className=""
+                                    
                                 />
+
                             </motion.div>
                         ))}
                     </motion.div>
